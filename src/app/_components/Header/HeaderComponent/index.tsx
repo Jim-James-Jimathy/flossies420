@@ -25,6 +25,7 @@ const HeaderComponent = ({ header }: { header: Header }) => {
         </Link>
 
         <HeaderNav header={header} />
+        <div className={classes.border} />
       </div>
     </nav>
   )
