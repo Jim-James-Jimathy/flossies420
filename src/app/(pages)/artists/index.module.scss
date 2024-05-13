@@ -1,0 +1,25 @@
+@import "../../_css/queries.scss"; 
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    
+    .artistsWrapper {
+        width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        @include small-break {
+            gap: 1rem;
+        }
+    }
+
+    @include small-break {
+        padding: 2rem 0 4rem 0;
+    }
+}

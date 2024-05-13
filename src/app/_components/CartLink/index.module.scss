@@ -2,6 +2,13 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: #000000;
+}
+
+:global([data-theme="dark"]) {
+  .cartLink {
+    color: #FFFFFF;
+  }
 }
 
 .quantity {

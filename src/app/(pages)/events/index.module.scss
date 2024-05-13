@@ -1,0 +1,60 @@
+@import "../../_css/queries.scss";
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1540px;
+    height: 100%;
+
+
+    .flyerWrapper {
+        padding-top: 5rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+
+        .flyerText {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: row; 
+            gap: 10px;
+            border-bottom: 4px solid black;
+            padding-bottom: 8px;
+
+            h2 {
+                font-size: 55px;
+                font-weight: 500;
+
+                @include small-break {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .flyer {
+            width: 350px;
+            height: 450px;
+            border: 2px solid black;
+            background-image: url("/assets/admin-ui/hero/event-flyer.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @include extra-mid-break {
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 7rem;
+        }
+        @include small-break {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+}
