@@ -13,13 +13,13 @@
   position: relative;
   width: 100%;
   max-width: 1540px;
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+  padding: 13rem 0;
 
   background-size: cover;
   background-position: center;
@@ -34,13 +34,6 @@
 
   }
 
-  @include mid-break {
-    height: 55vh;
-  }
-
-  @include small-break {
-    min-height: 45vh;
-  }
 }
 
 .heroTextBox {
@@ -55,9 +48,9 @@
   h2 {
     font-size: 105px;
     line-height: 100px;
-    font-weight: 500;
+    font-weight: 300;
     padding-bottom: 2rem;
-
+    
     @include large-break {
       font-size: 7vw;
     }
@@ -69,9 +62,10 @@
       font-size: 45px;
     }
   }
-
-  h4 {
-    font-size: 33px;
+  
+  h5 {
+    font-size: 35px;
+    font-weight: 300;
     padding-left: 1rem;
     font-style: italic;
   }

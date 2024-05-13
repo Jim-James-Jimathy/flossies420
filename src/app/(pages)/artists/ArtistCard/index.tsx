@@ -5,13 +5,11 @@ import classes from './index.module.scss'
 
 const ArtistCard = ({ data }) => {
   return (
-    <Link href={data.href} className={classes.container}>
-      <div className={classes.artistCard}>
-        <Image src={data.src} alt={data.title} fill />
-        <div className={classes.artistText}>
-          <h2>{data.title}</h2>
-          <p>{data.desc}</p>
-        </div>
+    <Link href={data.href} className={classes.artistCard}>
+      <Image src={data.src} alt={data.title} fill />
+      <div className={classes.artistText}>
+        <h3>{data.title}</h3>
+        <p>{data.desc}</p>
       </div>
     </Link>
   )
