@@ -30,5 +30,9 @@
         .flyer {
             position: relative;
         }
+
+        @include mid-break {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
