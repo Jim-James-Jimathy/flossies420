@@ -6,6 +6,7 @@ import { Category, Media } from '../../../../payload/payload-types'
 import { useFilter } from '../../../_providers/Filter'
 
 import classes from './index.module.scss'
+import Image from 'next/image'
 
 type CategoryCardProps = {
   category: Category
@@ -19,9 +20,15 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
     <Link
       href="/products"
       className={classes.card}
-      style={{ backgroundImage: `url(${media?.url})` }}
       onClick={() => setCategoryFilters([category.id])}
     >
+      <Image
+        src={media?.url}
+        alt={category.title}
+        className={classes.image}
+        height={400}
+        width={400}
+      />
       <p className={classes.title}>{category.title}</p>
     </Link>
   )

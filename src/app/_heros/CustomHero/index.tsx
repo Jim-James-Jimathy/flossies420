@@ -5,6 +5,7 @@ import { CMSLink } from '../../_components/Link'
 import RichText from '../../_components/RichText'
 
 import classes from './index.module.scss'
+import Image from 'next/image'
 
 export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
   const mediaUrl =
@@ -13,25 +14,11 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
     `${process.env.NEXT_PUBLIC_SERVER_URL}/media/${media.filename}`
 
   return (
-    <section className={classes.hero}>
-      <div className={classes.heroWrapper} style={{ backgroundImage: `url(${mediaUrl})` }}>
-        <div className={classes.heroOverlay} />
-        <div className={classes.heroTextBox}>
-          <RichText content={richText} />
-
-          {Array.isArray(links) && links.length > 0 && (
-            <ul className={classes.links}>
-              {links.map(({ link }, i) => {
-                return (
-                  <li key={i}>
-                    <CMSLink {...link} />
-                  </li>
-                )
-              })}
-            </ul>
-          )}
-        </div>
+    <section className={classes.container}>
+      <div className={classes.wrapper}>
+        <Image src={mediaUrl} alt="van" height={1000} width={1000} />
       </div>
+      <div className={classes.mailer}></div>
     </section>
   )
 }

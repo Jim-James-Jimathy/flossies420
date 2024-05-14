@@ -5,8 +5,8 @@
     width: 100%;
     max-width: 1540px;
     min-height: 65vh;
-    margin: 2rem auto;
-    padding: 5rem 2rem;
+    margin: auto;
+
 
     .flyerText {
         position: absolute;
@@ -18,21 +18,26 @@
             font-size: 47px;
             text-transform: uppercase;
             font-weight: 400;
+            white-space: nowrap;
         }
     }
     .flyerWrapper {
-        min-height: 65vh;
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(3, 1fr);
-        border: 2px solid black;
-
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        
         .flyer {
             position: relative;
-        }
+            aspect-ratio: 1 / 1;
 
-        @include mid-break {
-            grid-template-columns: repeat(2, 1fr);
+            
+            img {
+                border-radius: 5px;
+                object-fit: cover;
+            }
+        }
+        @include small-break {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }

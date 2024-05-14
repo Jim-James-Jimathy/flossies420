@@ -3,57 +3,37 @@
 .container {
   width: 100%;
   max-width: 1540px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5rem;
-  padding: 0 2rem;
-}
+  margin: 0 auto;
+  padding: 0 2rem 4rem 2rem;
 
-.titleWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  min-height: 5rem;
-
-  h3 {
-    font-weight: 700;
-    font-size: 45px;
-    text-wrap: pretty;
-    line-height: 3rem;
-    
-    @include small-break {
-      font-size: 35px;
-    }
-    
-    @include extra-small-break {
-      font-size: 30px;
-    }
+  .titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:4rem;
   }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 45vh;
+    border: 7px solid teal;
+    padding: 1rem;
+    gap: 2rem;
   
-  a {
-    font-size: 23px;
-    font-weight: 400;
+
+    @include large-break {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include extra-mid-break {
+      gap: 1rem;
+    }
     
     @include small-break {
-      display: none;
+      grid-template-columns: repeat(1, 1fr);
     }
+
   }
 }
 
-.list {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  @include extra-mid-break {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  @include small-break {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}

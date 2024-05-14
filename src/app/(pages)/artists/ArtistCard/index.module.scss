@@ -2,10 +2,12 @@
 
 .artistCard {
     position: relative;
-    min-height: 325px;
-
-        img {
+    aspect-ratio: 3 / 4;
+    
+    img {
+            border-radius: 5px;
             object-fit: cover;
+            object-position: center;
         }
 
         .artistText {
