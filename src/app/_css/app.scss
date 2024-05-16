@@ -1,7 +1,5 @@
 @use './queries.scss' as *;
-@use './colors.scss' as *;
 @use './type.scss' as *;
-@import "./theme.scss";
 
 :root {
   --base: 24px;
@@ -28,14 +26,7 @@
 
 html {
   @extend %body;
-  background: var(--theme-bg);
   -webkit-font-smoothing: antialiased;
-  opacity: 0;
-
-  &[data-theme=dark],
-  &[data-theme=light] {
-    opacity: initial;
-  }
 }
 
 html,
@@ -48,7 +39,6 @@ body {
   font-family: var(--font-jost);
   margin: 0;
   padding: 0;
-  color: var(--color-dark-500);
 
   display: flex;
   flex-flow: column;
@@ -58,15 +48,15 @@ body {
   flex: 1 1 auto;
 }
 
-::selection {
-  background: var(--color-dark-500);
-  color: var(--color-base-800);
-}
+// ::selection {
+//   background: var(--color-dark-500);
+//   color: var(--color-base-800);
+// }
 
-::-moz-selection {
-  background: var(--color-dark-50);
-  color: var(--color-base-800);
-}
+// ::-moz-selection {
+//   background: var(--color-dark-50);
+//   color: var(--color-base-800);
+// }
 
 img {
   max-width: 100%;
@@ -110,7 +100,6 @@ ol {
 }
 
 a {
-  color: var(--color-dark-500);
   text-decoration: none;
 
   &:focus {

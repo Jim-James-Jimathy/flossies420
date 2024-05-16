@@ -1,24 +1,31 @@
-import React, { Fragment } from 'react'
+'use client'
+
 import Image from 'next/image'
 
 import { Page } from '../../../payload/payload-types'
-import { CMSLink } from '../../_components/Link'
-import RichText from '../../_components/RichText'
+import AgeVerification from '../../_components/AgeVerification'
+import { useVerify } from '../../lib/store'
 
 import classes from './index.module.scss'
 
-export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
+export const CustomHero: React.FC<Page['hero']> = ({ media }) => {
   const mediaUrl =
     media &&
     typeof media !== 'string' &&
     `${process.env.NEXT_PUBLIC_SERVER_URL}/media/${media.filename}`
 
+  const { verified }: { verified: boolean } = useVerify()
+
   return (
-    <section className={classes.container}>
-      <div className={classes.wrapper}>
-        <Image src={mediaUrl} alt="van" height={1000} width={1000} />
-      </div>
-      <div className={classes.mailer}></div>
-    </section>
+    <>
+      {!verified && <AgeVerification />}
+      <section className={classes.container}>
+        <div className={classes.wrapper}>
+          <div className={classes.imageWrap}>
+            <Image src={mediaUrl} alt="van" fill className={classes.image} />
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
