@@ -18,7 +18,7 @@ export const CustomHero: React.FC<Page['hero']> = ({ media }) => {
 
   return (
     <>
-      {!verified && <AgeVerification />}
+      {/* {!verified && <AgeVerification />} */}
       <section className={classes.container}>
         <div className={classes.wrapper}>
           <div className={classes.imageWrap}>

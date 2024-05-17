@@ -29,7 +29,6 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
         height={400}
         width={400}
       />
-      <p className={classes.title}>{category.title}</p>
     </Link>
   )
 }

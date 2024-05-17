@@ -21,6 +21,7 @@ import { generateMeta } from '../../_utilities/generateMeta'
 export const dynamic = 'force-dynamic'
 
 import Categories from '../../_components/Categories'
+import MailingList from '../../_components/MailingList'
 
 import classes from './index.module.scss'
 
@@ -63,7 +64,7 @@ export default async function Page({ params: { slug = 'home' } }) {
       {slug === 'home' ? (
         <section className={classes.homeWrap}>
           <Hero {...hero} />
-
+          <MailingList />
           <div className={classes.home}>
             <Categories categories={categories} />
           </div>

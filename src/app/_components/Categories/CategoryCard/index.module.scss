@@ -2,12 +2,10 @@
 
 .card {
     position: relative;
-    border: 5px solid rosybrown;
+    border: 5px solid black;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    p {
-        position: absolute;
-    }
 }
