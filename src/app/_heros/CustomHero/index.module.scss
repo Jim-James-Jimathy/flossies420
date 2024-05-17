@@ -11,31 +11,39 @@
   .wrapper {
     width: 100%;
     max-width: 1540px;
-    height: 73vh;
-    max-height: 80vh;
+    height: 70vh;
+    max-height: 75vh;
     border-radius: 5px;
-    border: 2px solid black;
-    background-color: antiquewhite;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 
-    background-image: linear-gradient(#000000 2px, transparent 2px), linear-gradient(to right, #000000 2px, rgba(229, 229, 247, 0) 2px);
-    background-size: 34.4px 34.4px;
-    background-position: center;
 
-    .imageWrap {
-      position: relative;
-      height: 100%;
-      width: 70%;
-      margin: 0 auto;
+      .circ1, .circ2, .circ3, .circ4, .circ5 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+
 
       .image {
-        object-fit: cover;
-        padding-bottom: 2.5rem;
+        height: 75vh;
+        width: 75vh;
+        z-index: 6;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
-      @include mid-break {
-        width: 100%;
-      }
-    }
   }
 
 

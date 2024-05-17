@@ -1,5 +1,4 @@
 @use "../../../_css/queries.scss" as *;
-@import "../../../_css/queries.scss";
 
 .nav {
   display: flex;
@@ -11,13 +10,14 @@
   transition: opacity 100ms linear;
   visibility: visible;
   font-weight: 500;
+  font-size: 16px;
   
   > * {
     text-decoration: none;
   }
   
   .loginBtn {
-    font-weight: 500;
+    font-weight: 700;
     
     @include small-break {
       background-color: inherit;
@@ -28,18 +28,8 @@
   }
 }
 
-.events,
-.artists,
-.account {
+.links{
   color: #000000;
-}
-
-:global([data-theme="dark"]) {
-  .events,
-  .artists,
-  .account {
-    color: #FFFFFF;
-  }
 }
 
 .hide {
