@@ -8,12 +8,7 @@ import { useVerify } from '../../lib/store'
 
 import classes from './index.module.scss'
 
-export const CustomHero: React.FC<Page['hero']> = ({ media }) => {
-  const mediaUrl =
-    media &&
-    typeof media !== 'string' &&
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/media/${media.filename}`
-
+export const CustomHero: React.FC<Page['hero']> = () => {
   const { verified }: { verified: boolean } = useVerify()
 
   return (
@@ -33,8 +28,8 @@ export const CustomHero: React.FC<Page['hero']> = ({ media }) => {
             className={classes.circ3}
             style={{ width: '130vh', height: '130vh', zIndex: 3, backgroundColor: '#5a4743' }}
           />
-          <div className={classes.image}>
-            <Image src={mediaUrl} alt="van" fill className={classes.image} />
+          <div className={classes.imageWrap}>
+            <Image src="/assets/images/van-logo.png" alt="image of a frog" fill />
           </div>
         </div>
       </section>
