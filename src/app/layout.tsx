@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google'
 
 import { AdminBar } from './_components/AdminBar'
 import { Footer } from './_components/Footer'
@@ -10,9 +10,9 @@ import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
 import './_css/app.scss'
 
-const monty = Montserrat({
+const monty = Josefin_Sans({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
 })
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

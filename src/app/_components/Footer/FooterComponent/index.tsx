@@ -35,7 +35,10 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
 
               return (
                 <Button key={item.link.label} el="link" href={item.link.url} newTab={true}>
-                  <Image src={icon?.url} alt={item.link.label} width={30} height={30} />
+                  <div className={classes.iconWrap}>
+                    <Image src={icon?.url} alt={item.link.label} width={30} height={30} />
+                    <span>{item.link.label}</span>
+                  </div>
                 </Button>
               )
             })}

@@ -46,6 +46,17 @@
     .socialLinks {
       align-items: center;
       justify-content: flex-end;
+    
+      .iconWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
     }
 
     @include mid-break {
