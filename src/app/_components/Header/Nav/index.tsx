@@ -34,13 +34,9 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = () => {
         </Link>
       )}
       {!user && (
-        <Button
-          el="link"
-          href="/login"
-          label="Login"
-          onClick={() => (window.location.href = '/login')}
-          className={classes.loginBtn}
-        />
+        <Link href="/login" className={classes.loginBtn}>
+          Login
+        </Link>
       )}
     </nav>
   )

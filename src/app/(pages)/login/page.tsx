@@ -18,15 +18,7 @@ export default async function Login() {
   return (
     <section className={classes.login}>
       <div className={classes.heroImg}>
-        <Link href="/">
-          <Image
-            src="/logo-white.png"
-            alt="logo"
-            width={250}
-            height={23}
-            className={classes.logo}
-          />
-        </Link>
+        <Link href="/" className={classes.logo} />
       </div>
 
       <div className={classes.formWrapper}>
@@ -34,11 +26,9 @@ export default async function Login() {
           <RenderParams className={classes.params} />
 
           <div className={classes.formTitle}>
-            <h3>Welcome</h3>
-            <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
+            <h3>Welcome to Flossie's 420.</h3>
+            <p>Log in or create an account to get started.</p>
           </div>
-
-          <p>Please login here</p>
 
           <LoginForm />
         </div>

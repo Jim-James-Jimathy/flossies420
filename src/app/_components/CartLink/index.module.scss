@@ -3,12 +3,7 @@
   display: flex;
   align-items: center;
   color: #000000;
-}
-
-:global([data-theme="dark"]) {
-  .cartLink {
-    color: #FFFFFF;
-  }
+  font-weight: 600;
 }
 
 .quantity {

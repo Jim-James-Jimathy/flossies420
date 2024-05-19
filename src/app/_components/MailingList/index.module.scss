@@ -10,6 +10,7 @@
     border-radius: 5px;
     margin: auto;
     display: flex;
+    overflow: hidden;
 
     .text {
       flex: 2;
@@ -27,6 +28,7 @@
           font-size: 46px;
           margin-bottom: 1.75rem;
           text-transform: uppercase;
+          font-weight: 500;
 
           @include large-break {
             font-size: 30px;
@@ -42,7 +44,7 @@
             font-size: 30px;
             line-height: 1;
           }
-          
+
           @include extra-small-break {
             font-size: 24px;
           }
@@ -66,7 +68,7 @@
             @include small-break {
               font-size: 14px;
             }
-            
+
             @include extra-small-break {
               font-size: 12px;
             }
@@ -79,6 +81,7 @@
 
         }
       }
+
       @include mid-break {
         padding: 0;
         text-align: center;
@@ -90,7 +93,10 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      background-color: #5a4743;
+      border: 2px solid black;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-left: none;
 
       a {
         height: 25vh;
@@ -104,14 +110,9 @@
           font-weight: bold;
           text-transform: uppercase;
           border-radius: 5px;
-          background-color: rgba(0, 0, 0, 0.65);
+          background-color: #761a1e;
           color: #fff;
           padding: 1rem 3rem;
-          transition:cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.3s;
-
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.85);
-          }
 
           @include small-break {
             padding: .75rem 2rem;
@@ -124,6 +125,14 @@
           height: auto;
           width: auto;
         }
+      }
+
+      @include mid-break {
+        border-top: none;
+        border-left: 2px solid black;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
       }
     }
 
