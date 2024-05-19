@@ -18,10 +18,9 @@ const MailingList = () => {
           </div>
         </div>
         <div className={classes.btn}>
-          <div className={classes.btnInner}>
-            <h4>subscribe today and keep your stash stocked!</h4>
-            <Link href="/https://sitch.app/s/6EDoz0X">subscribe</Link>
-          </div>
+          <Link href="https://sitch.app/s/6EDoz0X">
+            <div className={classes.btnTxt}>Subscribe</div>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+@use "../../_css/queries.scss" as *;
+
 .mailingList {
   padding: 4rem 2rem;
 
@@ -8,21 +10,42 @@
     border-radius: 5px;
     margin: auto;
     display: flex;
-    overflow: hidden;
 
     .text {
       flex: 2;
       height: 100%;
-      background-color: dodgerblue;
+      background-color: #34455a;
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 2rem;
 
       .content {
-        
+
         h2 {
-          font-size: 50px;
+          font-size: 46px;
           margin-bottom: 1.75rem;
+          text-transform: uppercase;
+
+          @include large-break {
+            font-size: 30px;
+            padding: 1rem;
+            margin-bottom: 0;
+          }
+
+          @include mid-break {
+            font-size: 40px;
+          }
+
+          @include small-break {
+            font-size: 30px;
+            line-height: 1;
+          }
+          
+          @include extra-small-break {
+            font-size: 24px;
+          }
         }
 
         ul {
@@ -35,43 +58,78 @@
           li {
             font-size: 20px;
             font-weight: 500;
-            font-style: italic;
+
+            @include large-break {
+              font-size: 15px;
+            }
+
+            @include small-break {
+              font-size: 14px;
+            }
+            
+            @include extra-small-break {
+              font-size: 12px;
+            }
           }
+
+          @include mid-break {
+            list-style: none;
+            padding: 0 1rem 2rem 1rem;
+          }
+
         }
+      }
+      @include mid-break {
+        padding: 0;
+        text-align: center;
       }
     }
 
     .btn {
-      flex: 1;
-      height: 100%;
-      background-color: antiquewhite;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 2rem;
+      background-color: #5a4743;
 
-      .btnInner {
+      a {
+        height: 25vh;
+        width: 25vh;
         display: flex;
-        flex-direction: column;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
 
-        text-align: center;
-
-        h4 {
-          font-weight: 600;
-          margin-bottom: 3rem;
-        }
-
-        a {
-          color: #ffffff;
-          font-weight: 500;
+        .btnTxt {
+          font-size: 20px;
+          font-weight: bold;
           text-transform: uppercase;
-          background-color: seagreen;
-          padding: .5rem 2rem;
           border-radius: 5px;
+          background-color: rgba(0, 0, 0, 0.65);
+          color: #fff;
+          padding: 1rem 3rem;
+          transition:cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.3s;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+          }
+
+          @include small-break {
+            padding: .75rem 2rem;
+            font-size: 16px;
+            font-weight: 500;
+          }
         }
 
+        @include mid-break {
+          height: auto;
+          width: auto;
+        }
       }
+    }
+
+    @include mid-break {
+      flex-direction: column;
+      height: auto;
     }
   }
 }

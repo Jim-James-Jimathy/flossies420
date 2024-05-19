@@ -2,10 +2,15 @@
 
 .card {
     position: relative;
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    aspect-ratio: 1 / 1;
+    min-width: 100%;
 
+    @include extra-small-break {
+        min-width: 75%;
+    }
 }

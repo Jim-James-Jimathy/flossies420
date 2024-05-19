@@ -22,13 +22,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       className={classes.card}
       onClick={() => setCategoryFilters([category.id])}
     >
-      <Image
-        src={media?.url}
-        alt={category.title}
-        className={classes.image}
-        height={400}
-        width={400}
-      />
+      <Image src={media?.url} alt={category.title} className={classes.image} fill />
     </Link>
   )
 }

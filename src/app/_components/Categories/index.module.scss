@@ -11,25 +11,33 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom:4rem;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 24px;
+      border-bottom: 1px solid #000;
+    }
   }
 
   .list {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     min-height: 45vh;
     padding: 1rem;
-    gap: 2rem;
+    gap: 1rem;
   
-
     @include large-break {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mid-break {
       grid-template-columns: repeat(2, 1fr);
     }
     
-    @include extra-mid-break {
-      gap: 1rem;
-    }
-    
-    @include small-break {
+    @include extra-small-break {
       grid-template-columns: repeat(1, 1fr);
     }
 
