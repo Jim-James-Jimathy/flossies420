@@ -2,6 +2,7 @@
 
 .mailingList {
   padding: 4rem 2rem;
+  
 
   .wrapper {
     width: 100%;
@@ -11,6 +12,9 @@
     margin: auto;
     display: flex;
     overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 
     .text {
       flex: 2;
@@ -19,16 +23,16 @@
       color: #FFFFFF;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      justify-content: flex-start;
+      padding: 1rem 4rem;
 
       .content {
 
         h2 {
-          font-size: 46px;
-          margin-bottom: 1.75rem;
-          text-transform: uppercase;
-          font-weight: 500;
+          font-size: 44px;
+          margin-bottom: 1.45rem;
+          font-weight: 400;
+          line-height: 1.1;
 
           @include large-break {
             font-size: 30px;
@@ -55,11 +59,11 @@
           flex-direction: column;
           gap: .25rem;
           list-style: square;
-          padding-left: 1.75rem;
+          padding-left: 1.25rem;
 
           li {
             font-size: 20px;
-            font-weight: 500;
+            font-weight: 300;
 
             @include large-break {
               font-size: 15px;
@@ -83,7 +87,7 @@
       }
 
       @include mid-break {
-        padding: 0;
+        padding-top: 2rem;
         text-align: center;
       }
     }
@@ -93,10 +97,6 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      border: 2px solid black;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      border-left: none;
 
       a {
         height: 25vh;
@@ -110,7 +110,7 @@
           font-weight: bold;
           text-transform: uppercase;
           border-radius: 5px;
-          background-color: #761a1e;
+          background-color: #34455a;
           color: #fff;
           padding: 1rem 3rem;
 
@@ -127,13 +127,6 @@
         }
       }
 
-      @include mid-break {
-        border-top: none;
-        border-left: 2px solid black;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
     }
 
     @include mid-break {

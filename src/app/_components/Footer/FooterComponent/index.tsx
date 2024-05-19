@@ -21,7 +21,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         <div className={classes.footerWrap}>
           <div className={classes.logo}>
             <Link href="/">
-              <Image src="/logo-white.png" alt="logo" width={200} height={75} />
+              <Image src="/logo-white.png" alt="logo" width={150} height={75} />
             </Link>
           </div>
 

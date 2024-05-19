@@ -21,7 +21,7 @@ const HeaderComponent = ({ header }: { header: Header }) => {
     >
       <div className={classes.wrap}>
         <Link href="/">
-          <Image src="/logo.png" alt="logo" width={200} height={75} />
+          <Image src="/logo-lg.png" alt="logo" width={150} height={50} />
         </Link>
 
         <HeaderNav header={header} />

@@ -2,118 +2,118 @@
 @import "../../_css/common.scss";
 
 .productHero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
   width: 100%;
-  margin-top: 5rem;
 
-  @include large-break {
-    gap: 2rem;
-  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+    min-height: 45vh;
 
-  @include small-break {
-    grid-template-columns: 1fr;
-  }
-
-  .media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .mediaWrap {
-      position: relative;
-      flex: 1;
-      aspect-ratio: 1/1;
-      overflow: hidden;
-      border-radius: 5px;
-      box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.7);
-
-      .placeholder {}
-
-      .image {
-        object-fit: contain;
-        max-width: 100%;
-      }
-
+    @include large-break {
+      gap: 2rem;
     }
 
     @include small-break {
-      min-height: 250px;
+      grid-template-columns: 1fr;
     }
-  }
 
-
-  .details {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    .titleWrap {
-        margin-bottom: 3rem;
-
-      .title {
-        font-size: 37px;
-        text-wrap: pretty;
-        margin-bottom: 10px;
-        
-        @include large-break {
-          font-size: 33px;
-        }
-        
-        @include mid-break {
-          font-size: 27px;
-        }
-        
-        @include small-break {
-          font-size: 35px;
-        }
+    .media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      
+      img {
+        object-fit: contain;
       }
       
-      .categories {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 500;
-        padding-left: 10px;
+    }
+    
+    
+    .details {
+      position: relative;
+      display: flex;
+      flex-direction: column;
 
-        .category {
-          font-size: 17px;
+      .titleWrap {
+
+        .title {
+          font-size: 37px;
+
+          @include large-break {
+            font-size: 33px;
+          }
+
+          @include mid-break {
+            font-size: 27px;
+          }
+
+          @include small-break {
+            font-size: 35px;
+          }
         }
-        
-        .separator {
-          color: var(--color-gray-500);
-          padding: 0 10px;
-        }
-        
-        .stock {
-          color: var(--color-green-500);
+
+        .categories {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 500;
+
+          .category {
+            font-size: 17px;
+          }
+
+          .separator {
+            color: gray;
+          }
+
+          .stock {
+            color: seagreen;
+          }
+
+
         }
       }
+
+      .price {
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+      }
+
     }
 
-  }
+    .description {
+      display: flex;
+      flex-direction: column;
 
-  .description {
-    display: flex;
-    flex-direction: column;
+      h6 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: .25rem;
+      }
 
-    h6 {
-      font-size: 25px;
-      font-weight: 500;
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+        text-wrap: pretty;
+      }
+
     }
 
-    @include small-break {
-      margin-bottom: 7rem;
+    .addToCartButton {
+      width: 100%;
     }
   }
-
-  .addToCartButton {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
 
 }
