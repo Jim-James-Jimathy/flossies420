@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import { useVerify, VerifyState } from '../../lib/store'
-import { Button } from '../Button'
 
 import classes from './index.module.scss'
 
@@ -22,15 +21,12 @@ const AgeVerification = () => {
           </div>
         </div>
         <div className={classes.btns}>
-          <Link
-            className={classes.no}
-            href="https://static.wikia.nocookie.net/spongebob/images/1/19/No_Weenies_Allowed_200.png/revision/latest/scale-to-width-down/1200?cb=20200806153155"
-          >
-            no
+          <Link className={classes.no} href="https://www.google.com">
+            <span>no</span>
           </Link>
-          <Button onClick={setVerified} className={classes.yes}>
-            yes
-          </Button>
+          <div onClick={setVerified} className={classes.yes}>
+            <span>yes</span>
+          </div>
         </div>
       </div>
     </div>

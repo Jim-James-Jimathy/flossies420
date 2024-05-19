@@ -13,7 +13,7 @@ export const CustomHero: React.FC<Page['hero']> = () => {
 
   return (
     <>
-      {/* {!verified && <AgeVerification />} */}
+      {!verified && <AgeVerification />}
       <section className={classes.container}>
         <div className={classes.wrapper}>
           <div

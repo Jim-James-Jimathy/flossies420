@@ -60,17 +60,25 @@
             padding: 2rem 4rem;
             
             .no {
-                padding: .5rem 5rem;
-                text-transform: uppercase;
-                font-weight: 700;
-                background-color: rosybrown;
+
+                span {
+                    background-color: tomato;
+                    padding: .75rem 3rem;
+                    border-radius: 2px;
+                    color: #000;
+                    text-transform: uppercase;
+                }
             }
 
             .yes {
-                padding: .5rem 5rem;
-                text-transform: uppercase;
-                font-weight: 700;
-                background-color: seagreen;
+
+                span {
+                    background-color: seagreen;
+                    padding: .75rem 3rem;
+                    border-radius: 2px;
+                    color: #000;
+                    text-transform: uppercase;
+                }
             }
         }
     }
