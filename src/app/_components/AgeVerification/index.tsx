@@ -22,7 +22,7 @@ const AgeVerification = () => {
             No
           </Link>
           <div className={classes.yes} onClick={setVerified}>
-            Yes
+            <span>Yes</span>
           </div>
         </div>
       </div>

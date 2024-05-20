@@ -4,16 +4,20 @@ import Image from 'next/image'
 
 import { Page } from '../../../payload/payload-types'
 import AgeVerification from '../../_components/AgeVerification'
+import { useAuth } from '../../_providers/Auth'
 import { useVerify } from '../../lib/store'
 
 import classes from './index.module.scss'
 
 export const CustomHero: React.FC<Page['hero']> = () => {
   const { verified }: { verified: boolean } = useVerify()
+  const user = useAuth()
+
+  console.log(user)
 
   return (
     <>
-      {!verified && <AgeVerification />}
+      {!verified && user.user === null && <AgeVerification />}
       <section className={classes.container}>
         <div className={classes.wrapper}>
           <div className={classes.circ1} style={{ zIndex: 5, backgroundColor: '#34455a' }} />

@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 
 import { Category, Product } from '../../../payload/payload-types'
 import { AddToCartButton } from '../../_components/AddToCartButton'
-import { Gutter } from '../../_components/Gutter'
 import { Media } from '../../_components/Media'
 import { Price } from '../../_components/Price'
 
@@ -14,7 +13,7 @@ export const ProductHero: React.FC<{
   const { title, categories, meta: { image: metaImage, description } = {} } = product
 
   return (
-    <Gutter className={classes.productHero}>
+    <div className={classes.productHero}>
       <div className={classes.wrapper}>
         <div className={classes.media}>
           {!metaImage && <div className={classes.placeholder}>No image</div>}
@@ -56,6 +55,6 @@ export const ProductHero: React.FC<{
           </div>
         </div>
       </div>
-    </Gutter>
+    </div>
   )
 }
