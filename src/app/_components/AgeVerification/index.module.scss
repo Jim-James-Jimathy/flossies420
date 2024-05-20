@@ -2,84 +2,102 @@
 
 .container {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.97);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 999;
 
     .wrapper {
-        background-color: white;
-        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
         display: flex;
         flex-direction: column;
-        min-height: 35vh;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 65%;
+        height: 65%;
 
-        .textWrap {
-            flex: 1;
-            display: flex;
-            padding: 0 3rem;
+        .question {
+            text-align: center;
+            h1 {
+                text-transform: uppercase;
+                font-size: 4vw;
+                font-weight: 400;
+                line-height: 1;
 
-            .text {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 3rem;
-
-                h1 {
-                    font-size: 4rem;
-                    text-transform: uppercase;
-                    font-weight: 500;
+                @include mid-break {
+                    font-size: 5vw;
                 }
-
-                .finePrint {
-                    margin-top: 15px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    p {
-                        line-height: 0;
-                        font-size: 13px;
-                        font-style: italic;
-                        margin-top: 1rem;
-                    }
+                
+                @include small-break {
+                    font-size: 6vw;
+                }
+                
+                @include extra-small-break {
+                    font-size: 10vw;
                 }
             }
         }
+        .requirements {
+            padding: 0 2rem;
+            text-align: center;
+            p {
+                font-size: 1.2vw;
+
+                @include large-break {
+                    font-size: 1.5vw;
+                }
+
+                @include extra-mid-break {
+                    font-size: 1.75vw;
+                }
+
+                @include mid-break {
+                    font-size: 2vw;
+                }
+                
+                @include small-break {
+                    font-size: 2.5vw;
+                }
+                
+                @include extra-small-break {
+                    font-size: 3vw;
+                }
+            } 
+        }
 
         .btns {
-            flex: 1;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-            padding: 2rem 4rem;
-            
+            gap: 5rem;
+            margin-top: 2rem;
+
+            .no, .yes {
+                padding: .45rem 2rem;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                font-weight: bold;
+                box-shadow:  1.5px 1.5px 4px rgba(0, 0, 0, 0.85);
+            }
+
             .no {
-
-                span {
-                    background-color: tomato;
-                    padding: .75rem 3rem;
-                    border-radius: 2px;
-                    color: #000;
-                    text-transform: uppercase;
-                }
+                background-color: tomato;
             }
-
             .yes {
-
-                span {
-                    background-color: seagreen;
-                    padding: .75rem 3rem;
-                    border-radius: 2px;
-                    color: #000;
-                    text-transform: uppercase;
-                }
+                background-color: seagreen;
             }
+        }
+
+        @include mid-break {
+            height: 50%;
+            width: 90%;
+            
         }
     }
 }

@@ -10,22 +10,19 @@ const AgeVerification = () => {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <div className={classes.textWrap}>
-          <div className={classes.text}>
-            <h1>Are you 21</h1>
-            <h1>or older?</h1>
-            <div className={classes.finePrint}>
-              <p>This website requires you to be 21 years of age or older.</p>
-              <p>Please verify your age to view the content, or click "Exit" to leave.</p>
-            </div>
-          </div>
+        <div className={classes.question}>
+          <h1>Are you 21 or older?</h1>
+        </div>
+        <div className={classes.requirements}>
+          <p>You must be 21 or older to enter this site.</p>
+          <p>by clicking yes, you are verifying that you are at least 21 years old.</p>
         </div>
         <div className={classes.btns}>
-          <Link className={classes.no} href="https://www.google.com">
-            <span>no</span>
+          <Link href="https://www.google.com" className={classes.no}>
+            No
           </Link>
-          <div onClick={setVerified} className={classes.yes}>
-            <span>yes</span>
+          <div className={classes.yes} onClick={setVerified}>
+            Yes
           </div>
         </div>
       </div>
