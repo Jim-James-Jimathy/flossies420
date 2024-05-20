@@ -35,7 +35,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = () => {
       )}
       {!user && (
         <Link href="/login" className={classes.loginBtn}>
-          Login
+          <span>Login</span>
         </Link>
       )}
     </nav>

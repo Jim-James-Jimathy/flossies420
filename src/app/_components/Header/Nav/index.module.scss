@@ -7,28 +7,34 @@
   flex-wrap: wrap;
   justify-content: center;
   opacity: 1;
-  transition: opacity 100ms linear;
   visibility: visible;
-  font-weight: 500;
-  font-size: 18px;
-  
+
   > * {
     text-decoration: none;
   }
-  
+
   .loginBtn {
-    text-transform: uppercase;
-    font-size: 17px;
-    color: #000;
-    
-      background-color: inherit;
+
+    span {
+      font-size: 15px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
       border: 1px solid black;
       border-radius: 2px;
-      padding: .15rem .75rem;
+      padding: 7px 10px 5px 10px;
+
+      @include small-break {
+        background-color: #000;
+        color: #FFFFFF;
+        border: none;
+      }
+    }
   }
 }
 
-.links{
+.links {
+  font-size: 18px;
   color: #000;
   font-weight: 600;
 }
