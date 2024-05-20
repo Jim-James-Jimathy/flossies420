@@ -18,8 +18,8 @@
 .formTitle {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   width: 100%;
+  text-align: center;
 
   h3 {
     margin: 0;
@@ -34,7 +34,6 @@
   }
 
   p {
-    padding-left: 10px;
 
     @include small-break {
       padding-left: 0;

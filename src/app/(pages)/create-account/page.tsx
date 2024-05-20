@@ -21,15 +21,7 @@ export default async function CreateAccount() {
   return (
     <section className={classes.createAccount}>
       <div className={classes.heroImg}>
-        <Link href="/">
-          <Image
-            src="/logo-white.png"
-            alt="logo"
-            width={250}
-            height={23}
-            className={classes.logo}
-          />
-        </Link>
+        <Link href="/" className={classes.logo} />
       </div>
 
       <div className={classes.formWrapper}>
@@ -37,11 +29,9 @@ export default async function CreateAccount() {
           <RenderParams className={classes.params} />
 
           <div className={classes.formTitle}>
-            <h3>Create Account</h3>
-            <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
+            <h3>Create an account and start shopping!</h3>
+            <p>Please fill out all fields to create a new account </p>
           </div>
-
-          <p>Please enter details</p>
 
           <CreateAccountForm />
         </div>
