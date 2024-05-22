@@ -9,7 +9,7 @@ const MailingList = () => {
       <div className={classes.wrapper}>
         <div className={classes.text}>
           <div className={classes.content}>
-            <h2>Subscribe to our mailing list</h2>
+            <h2>subscribe to our mailing list</h2>
             <ul>
               <li>Join our inner circle of high rollers and elevate your experience</li>
               <li>Sign up now to unlock exclusive discounts on top-notch products</li>
