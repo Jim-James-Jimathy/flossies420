@@ -39,6 +39,27 @@
         flex-direction: row;
       }
     }
+
+    .laws {
+      margin-top: 1rem;
+      font-size: 25px;
+    }
+
+    .lawBtn {
+      padding: 0.35rem 2rem;
+      background-color: #000;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      span {
+        padding-top: 5px;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
     
     @include large-break {
       flex-direction: column;

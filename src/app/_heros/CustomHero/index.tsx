@@ -18,20 +18,18 @@ export const CustomHero: React.FC<Page['hero']> = () => {
       {/* {!verified && user.user === null && <AgeVerification />} */}
       <section className={classes.container}>
         <div className={classes.wrapper}>
-          <div className={classes.circ1} style={{ zIndex: 5, backgroundColor: '#34455a' }} />
-          <div className={classes.circ2} style={{ zIndex: 4, backgroundColor: '#761a1e' }} />
-          <div className={classes.circ3} style={{ zIndex: 3, backgroundColor: '#5a4743' }} />
+          {/* <div className={classes.boxes}>
+            <div className={classes.box} style={{ backgroundColor: '#932125' }} />
+            <div className={classes.box} style={{ backgroundColor: '#34455A' }} />
+            <div className={classes.box} style={{ backgroundColor: '#5A4743' }} />
+            <div className={classes.box} style={{ backgroundColor: '#7F7A81' }} />
+            <div className={classes.box} style={{ backgroundColor: '#080609' }} />
+          </div> */}
           <div className={classes.imageWrap}>
             <Image
               src="/assets/images/van-logo.png"
-              alt="image of a frog"
+              alt="van logo"
               className={classes.vanLogo}
-              fill
-            />
-            <Image
-              src="/logo-white-lg.png"
-              alt="flossies 420 logo"
-              className={classes.logo}
               width={1000}
               height={500}
             />

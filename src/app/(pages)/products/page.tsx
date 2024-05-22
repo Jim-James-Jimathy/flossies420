@@ -1,5 +1,6 @@
 import React from 'react'
 import { draftMode } from 'next/headers'
+import Link from 'next/link'
 
 import { Category, Page } from '../../../payload/payload-types'
 import { fetchDoc } from '../../_api/fetchDoc'

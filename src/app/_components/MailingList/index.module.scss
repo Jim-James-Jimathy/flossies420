@@ -27,13 +27,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        justify-content: space-evenly;
-        padding: 4rem 0;
+        padding: 0 1rem;
         
         h2 {
           line-height: 1;
           font-weight: 300;
           font-size: 3.5rem;
+          margin-bottom: 1rem;
 
           @include extra-mid-break {
             font-size: 2.87rem;
@@ -44,7 +44,7 @@
           } 
 
           @include small-break {
-            font-size: 7.5vw;
+            font-size: 7vw;
             font-weight: normal;
           }
         }
@@ -57,27 +57,36 @@
           
           li {
             font-size: 1.25rem;
-            font-weight: 300;
             
             @include extra-mid-break {
               font-size: 1.1rem;
             } 
             
             @include mid-break {
-              font-size: 1.57rem;
+              font-size: 1.55rem;
             } 
             
             @include small-break {
-              font-size: 14px;
-              font-weight: 300;
+              font-size: 1.25rem;
+            } 
+            
+            @include small-break {
+              font-size: 1rem;
+            } 
+            
+            @include extra-small-break {
+              font-size: .87rem;
             } 
             
           }
           @include small-break {
-            list-style: none;
             text-wrap: stable;
-            padding: 1rem;
             line-height: 1.1;
+            text-align: center;
+          }
+          
+          @include extra-small-break {
+            list-style: none;
           }
         }
       }

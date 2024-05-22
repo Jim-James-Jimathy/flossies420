@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 
 import { Category } from '../../../../payload/payload-types'
 import { Checkbox } from '../../../_components/Checkbox'
@@ -61,6 +62,15 @@ const Filters = ({ categories }: { categories: Category[] }) => {
             onRadioChange={handleSort}
             groupName="sort"
           />
+        </div>
+        <h6 className={classes.laws}>Delta 8 shipping laws</h6>
+        <div className={classes.inputWrap}>
+          <Link
+            href="https://hionnature.com/pages/delta-8-shipping-laws"
+            className={classes.lawBtn}
+          >
+            <span>view laws</span>
+          </Link>
         </div>
       </div>
     </div>
