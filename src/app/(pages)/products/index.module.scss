@@ -5,15 +5,20 @@
   height: 100%;
   min-height: 50vh;
   padding: 0 5rem;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: 1fr 85%;
-  gap: 60px;
-
-  @include extra-large-break {
-    grid-template-columns: 100%;
-    gap: 20px;
+  
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 85%;
+    gap: 60px;
+    
+    @include large-break {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+    
+  }
+  
+  @include large-break {
+    padding: 0 2rem;
   }
 }

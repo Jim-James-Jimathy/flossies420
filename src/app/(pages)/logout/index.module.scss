@@ -1,3 +1,9 @@
+@use "../../_css/queries.scss" as *;
+
 .logout {
-  margin-bottom: var(--block-padding);
+  padding: 5rem 10rem;
+
+  @include small-break {
+    padding: 3rem 1rem;
+  }
 }

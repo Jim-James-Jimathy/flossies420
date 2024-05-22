@@ -13,11 +13,9 @@ export const CustomHero: React.FC<Page['hero']> = () => {
   const { verified }: { verified: boolean } = useVerify()
   const user = useAuth()
 
-  console.log(user)
-
   return (
     <>
-      {!verified && user.user === null && <AgeVerification />}
+      {/* {!verified && user.user === null && <AgeVerification />} */}
       <section className={classes.container}>
         <div className={classes.wrapper}>
           <div className={classes.circ1} style={{ zIndex: 5, backgroundColor: '#34455a' }} />
