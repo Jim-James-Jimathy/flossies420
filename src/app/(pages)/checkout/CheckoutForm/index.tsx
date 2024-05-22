@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useCallback } from 'react'
-import { PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js'
+import { AddressElement, PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import { useRouter } from 'next/navigation'
 
 import { Order } from '../../../../payload/payload-types'
@@ -19,6 +19,8 @@ export const CheckoutForm: React.FC<{}> = () => {
   const [isLoading, setIsLoading] = React.useState(false)
   const router = useRouter()
   const { cart, cartTotal } = useCart()
+
+  console.log(elements)
 
   const handleSubmit = useCallback(
     async e => {
@@ -99,6 +101,21 @@ export const CheckoutForm: React.FC<{}> = () => {
     <form onSubmit={handleSubmit} className={classes.form}>
       {error && <Message error={error} />}
       <PaymentElement />
+      <AddressElement
+        options={{
+          mode: 'billing',
+          allowedCountries: ['US'],
+          blockPoBox: true,
+          fields: {
+            phone: 'always',
+          },
+          validation: {
+            phone: {
+              required: 'always',
+            },
+          },
+        }}
+      />
       <div className={classes.actions}>
         <Button label="Back to cart" href="/cart" appearance="secondary" />
         <Button
